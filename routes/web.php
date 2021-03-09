@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+      'nome' => 'Donald',
+      'cognome' => 'Duck',
+      'vivo' => true,
+      'infos' => [
+        'autore' => 'Walt Disney',
+        'apparizione' => '9 giugno 1934'
+      ],
+      'extra_infos' => []
+    ];
+    return view('home', $data);
 });
