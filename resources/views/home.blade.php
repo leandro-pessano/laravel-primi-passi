@@ -10,17 +10,18 @@
   <h1>{{$nome}} {{$cognome}}</h1>
 
   <h2>Informazioni:</h2>
-  <small>numero informazioni: {{count($infos)+1}}</small>
+  <small>numero informazioni: {{count($infos)}}</small>
   <ul>
     @foreach ($infos as $key => $info)
+      @if (!$loop->last)
       <li>{{$key}} : {{$info}}</li>
+      @endif
+      @if ($loop->last && $info === true)
+        <li>in vita: sì</li>
+      @elseif ($loop->last && $info === false)
+        <li>in vita: no</li>
+      @endif
     @endforeach
-
-    @if ($vivo)
-      <li>in vita: sì</li>
-    @else
-      <li>in vita: no</li>
-    @endif
   </ul>
 
   <h2>Informazioni extra:</h2>

@@ -17,10 +17,10 @@ Route::get('/', function () {
     $data = [
       'nome' => 'Donald',
       'cognome' => 'Duck',
-      'vivo' => true,
       'infos' => [
         'autore' => 'Walt Disney',
-        'apparizione' => '9 giugno 1934'
+        'apparizione' => '9 giugno 1934',
+        'vivo' => true
       ],
       'extra_infos' => []
     ];
