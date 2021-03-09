@@ -15,8 +15,7 @@
     @foreach ($infos as $key => $info)
       @if (!$loop->last)
       <li>{{$key}} : {{$info}}</li>
-      @endif
-      @if ($loop->last && $info === true)
+      @elseif ($loop->last && $info === true)
         <li>in vita: sì</li>
       @elseif ($loop->last && $info === false)
         <li>in vita: no</li>
