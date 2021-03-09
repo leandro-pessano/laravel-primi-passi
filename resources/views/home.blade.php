@@ -10,7 +10,7 @@
   <h1>{{$nome}} {{$cognome}}</h1>
 
   <h2>Informazioni:</h2>
-  <small>numero informazioni: {{count($infos)}}</small>
+  <small>numero informazioni: {{count($infos)+1}}</small>
   <ul>
     @foreach ($infos as $key => $info)
       <li>{{$key}} : {{$info}}</li>
